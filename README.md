@@ -2,7 +2,7 @@
 
 ## Overview
 
-Repository for experiments for [Autogen](https://github.com/microsoft/autogen) by Microsoft. This is an interesting approach to working with LLMs using user proxies, it can also do group chats with multiple experts and works with functions. This repo has a working implementation with some work done to incorporate llama index, which is slightly redundant because autogen supplies it's own document retrevial solution, but I needed to interface with some existing technology.
+Repository for experiments for [Autogen](https://github.com/microsoft/autogen) by Microsoft. This is an interesting approach to working with LLMs using user proxies, it can also do group chats with multiple experts and works with functions. This repo has a working implementation with some work done to incorporate llama index, which is slightly redundant because autogen supplies it's own document retrevial solution, but I needed to interface with some existing technology. I am also doing basic experiments with the perplexity AI API.
 
 ## Setup
 
@@ -35,3 +35,9 @@ docker run --rm --env-file .env -v $(pwd):/app autogen_experiments
 ### configure environment variables
 
 look at `env.example` and ` OAI_CONFIG_LIST.example`` for examples of how to configure the environment variables, replace the example values with your own, remove the  `.example` from the file name and you should be good to go.
+
+## important files
+
+Update text files in `app/resources` to change the input data for the experiments.
+
+`app/resources/chat_message.md` is the main test message
