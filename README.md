@@ -8,11 +8,6 @@ Repository for experiments for [Autogen](https://github.com/microsoft/autogen) b
 
 build docker image
 
-```bash
-docker build -t autogen_experiments . --no-cache
-# -t used to name and optionally a tag in the 'name:tag' format your image
-```
-
 use docker-compose
 
 ```bash
@@ -20,6 +15,11 @@ docker up
 ```
 
 ### or you can run docker
+
+```bash
+docker build -t autogen_experiments . --no-cache
+# -t used to name and optionally a tag in the 'name:tag' format your image
+```
 
 ```bash
 docker run --env-file .env -v $(pwd):/app autogen_experiments
