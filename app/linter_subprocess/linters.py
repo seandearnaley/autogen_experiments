@@ -28,7 +28,7 @@ def run_linters(script_path: Path) -> str:
 def main() -> None:
     """Run linters on a script."""
     script_path = Path(
-        "/Users/seandearnaley/Documents/GitHub/autogen_docsearch/work_dir/mermaid_delegator/mermaid_diagram.py"  # noqa: E501 pylint: disable=line-too-long
+        "work_dir/mermaid_delegator/mermaid_diagram.py"  # noqa: E501 pylint: disable=line-too-long
     )
     lint_results = run_linters(script_path)
     print(lint_results)

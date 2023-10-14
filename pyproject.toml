@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "autogen_docsearch"
+name = "autogen_experiments"
 version = "0.1.0"
 description = "Docsearch with LLamaIndex and Autogen + Mermaid."
 authors = ["Sean Dearnaley <SeanDearnaley@outlook.com>"]

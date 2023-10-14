@@ -23,7 +23,7 @@ docker build -t autogen_experiments . --no-cache
 
 ```bash
 docker run --env-file .env -v $(pwd):/app autogen_experiments
-# This command runs a Docker container from the `autogen_docsearch` image, loads environment variables from a file named `.env`, and mounts the current directory to `/app` inside the container.
+# This command runs a Docker container from the `autogen_experiments` image, loads environment variables from a file named `.env`, and mounts the current directory to `/app` inside the container.
 ```
 
 ```bash
@@ -34,7 +34,7 @@ docker run --rm --env-file .env -v $(pwd):/app autogen_experiments
 
 ### configure environment variables
 
-look at `env.example` and ` OAI_CONFIG_LIST.example`` for examples of how to configure the environment variables, replace the example values with your own, remove the  `.example` from the file name and you should be good to go.
+look at `env.example` and `OAI_CONFIG_LIST.example`` for examples of how to configure the environment variables, replace the example values with your own, remove the `.example` from the file name and you should be good to go.
 
 ## important files
 
