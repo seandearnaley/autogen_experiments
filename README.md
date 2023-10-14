@@ -1,2 +1,37 @@
-# autogen_experiments
-Docker app testing out capabilities of Microsoft's Autogen alongside Llama Index
+# Autogen Experiments
+
+## Overview
+
+Repository for experiments for [Autogen](https://github.com/microsoft/autogen) by Microsoft. This is an interesting approach to working with LLMs using user proxies, it can also do group chats with multiple experts and works with functions. This repo has a working implementation with some work done to incorporate llama index, which is slightly redundant because autogen supplies it's own document retrevial solution, but I needed to interface with some existing technology.
+
+## Setup
+
+use docker-compose
+
+```bash
+docker up
+```
+
+build docker image
+
+```bash
+docker build -t autogen_experiments . --no-cache
+# -t used to name and optionally a tag in the 'name:tag' format your image
+```
+
+### run docker
+
+```bash
+docker run --env-file .env -v $(pwd):/app autogen_experiments
+# This command runs a Docker container from the `autogen_docsearch` image, loads environment variables from a file named `.env`, and mounts the current directory to `/app` inside the container.
+```
+
+```bash
+docker run --rm --env-file .env -v $(pwd):/app autogen_experiments
+
+# Using `--rm` Flag**: Include the `--rm` flag in your `docker run` command to automatically remove the container when it exits:
+```
+
+### configure environment variables
+
+look at `env.example` and ` OAI_CONFIG_LIST.example`` for examples of how to configure the environment variables, replace the example values with your own, remove the  `.example` from the file name and you should be good to go.

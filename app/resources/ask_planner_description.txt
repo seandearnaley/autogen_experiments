@@ -1,0 +1,1 @@
+ask planner to: 1. get a plan for finishing a task, 2. verify the execution result of the plan and potentially suggest new plan.

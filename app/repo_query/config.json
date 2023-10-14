@@ -1,0 +1,41 @@
+{
+  "REPOS": {
+    "mermaid-js/mermaid@12a47076cf47aa3876285016d1182d48443afc93": {
+      "ignore_directories": [
+        ".github",
+        "cypress",
+        "tests",
+        "scripts",
+        ".husky",
+        ".vite",
+        ".vscode",
+        "img",
+        "__mocks__",
+        "packages"
+      ],
+      "ignore_file_extensions": [".toml", ".png", ".svg"]
+    }
+  },
+  "MODEL_NAME": "gpt-4",
+  "CONTEXT_WINDOW": 8192,
+  "NUMBER_OF_OUTPUT_TOKENS": 1024,
+  "CHUNK_SIZE_LIMIT": 512,
+  "CHUNK_OVERLAP": 200,
+  "MAX_TOKENS": null,
+  "BACKUP_SEPARATORS": [
+    "\n",
+    "\n\n",
+    "\r\n",
+    "\r",
+    "\t",
+    "\\",
+    "\f",
+    "//",
+    "+",
+    "=",
+    ",",
+    ".",
+    "a",
+    "e"
+  ]
+}

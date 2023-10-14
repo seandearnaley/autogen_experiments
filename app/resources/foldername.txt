@@ -1,0 +1,19 @@
+Come up with one good folder name related to this prompt, it must work be a valid folder name it be alpanumeric, no spaces and lowercase.
+
+DO NOT REPLY WITH ANYTHING OTHER THAN A FOLDER NAME THAT CAN BE READ BY A SCANTRON MACHINE.
+
+So no double or single quotes, no backslashes, no upper case characters, no spaces, no special characters.
+
+UTF-8 encoding is used.
+
+Examples:
+visualiser_for_reporting_engine
+mermaid_production_for_python
+synthetic_data_for_reporting_engine
+syntax_highlighting_for_python
+code_completion_for_python
+
+Here is the prompt:
+<PROMPT>\n{prompt}\n\n</PROMPT>
+
+<VALID_FOLDER_NAME>

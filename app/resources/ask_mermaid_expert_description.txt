@@ -1,0 +1,1 @@
+ask mermaid expert questions about mermaid.js specific questions, they have expert knowledge from the documentation and examples of good mermaid definitions as well as syntax rules.
