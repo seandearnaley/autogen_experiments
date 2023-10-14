@@ -4,7 +4,7 @@ from datetime import datetime
 from pathlib import Path
 
 
-def setup_logging():
+def setup_logging() -> None:
     """Setup logging."""
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
