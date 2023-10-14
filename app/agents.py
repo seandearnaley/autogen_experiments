@@ -110,7 +110,7 @@ def create_planner_agent() -> Callable[[str], str]:
 
 
 def create_agents(
-    foldername: str, command_args: Dict["str", "str"]
+    foldername: str, command_args: Dict[str, str]
 ) -> Tuple[autogen.AssistantAgent, autogen.UserProxyAgent]:
     """Create agents."""
 
@@ -151,7 +151,7 @@ def create_agents(
     return assistant, user_proxy
 
 
-def start_chat(command_args: Dict["str", "str"]) -> None:
+def start_chat(command_args: Dict[str, str]) -> None:
     """Start chat."""
     try:
         message = load_string_from_file("app/resources/chat_message.md")
