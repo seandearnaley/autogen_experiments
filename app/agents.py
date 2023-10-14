@@ -1,5 +1,6 @@
 """Create agents."""
 import logging
+from typing import Callable, Dict, Tuple
 
 import autogen
 from autogen import config_list_from_json
@@ -83,7 +84,7 @@ class ChatException(Exception):
     """Chat exception."""
 
 
-def create_planner_agent():
+def create_planner_agent() -> Callable[[str], str]:
     """Create planner agent."""
 
     planner = autogen.AssistantAgent(
@@ -99,16 +100,18 @@ def create_planner_agent():
         human_input_mode="NEVER",
     )
 
-    def ask_planner(message):
+    def ask_planner(message: str) -> str:
         """Ask the planner a question."""
         planner_user.initiate_chat(planner, message=message)
         # return the last message received from the planner
-        return planner_user.last_message()["content"]
+        return str(planner_user.last_message()["content"])
 
     return ask_planner
 
 
-def create_agents(foldername: str, command_args):
+def create_agents(
+    foldername: str, command_args: Dict["str", "str"]
+) -> Tuple[autogen.AssistantAgent, autogen.UserProxyAgent]:
     """Create agents."""
 
     # query_engine = RepoQueryEngine(command_args)
@@ -148,7 +151,7 @@ def create_agents(foldername: str, command_args):
     return assistant, user_proxy
 
 
-def start_chat(command_args):
+def start_chat(command_args: Dict["str", "str"]) -> None:
     """Start chat."""
     try:
         message = load_string_from_file("app/resources/chat_message.md")
